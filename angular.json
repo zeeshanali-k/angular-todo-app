@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-todo-app": {
+    "tasks-zone": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-todo-app:build:production"
+              "browserTarget": "tasks-zone:build:production"
             },
             "development": {
-              "browserTarget": "angular-todo-app:build:development"
+              "browserTarget": "tasks-zone:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +78,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-todo-app:build"
+            "browserTarget": "tasks-zone:build"
           }
         },
         "test": {
@@ -99,5 +99,5 @@
       }
     }
   },
-  "defaultProject": "angular-todo-app"
+  "defaultProject": "tasks-zone"
 }
