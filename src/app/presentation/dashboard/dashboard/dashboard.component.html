@@ -1,0 +1,31 @@
+<mat-toolbar color="accent" *ngIf="hideSideNav">
+  <button
+    mat-icon-button
+    aria-label="Example icon-button with menu icon"
+    (click)="opened = !opened"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span class="mx-3">Tasks Zone</span>
+</mat-toolbar>
+<mat-sidenav-container
+  class="w-100"
+  [ngClass]="{
+    'full-height-container-100': !hideSideNav,
+    'full-screen-container': hideSideNav
+  }"
+>
+  <!-- side,push,over -->
+  <mat-sidenav
+    [mode]="hideSideNav ? 'over' : 'side'"
+    #sideNav
+    [(opened)]="opened"
+  >
+    <app-sid-nav-content></app-sid-nav-content>
+  </mat-sidenav>
+
+  <!-- <mat-drawer mode="side" opened>Drawer content</mat-drawer>-->
+  <mat-sidenav-content>
+    <router-outlet name="dashboard"></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

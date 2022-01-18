@@ -1,0 +1,28 @@
+<mat-card class="mx-2 my-2">
+  <mat-card-title>Add ToDo</mat-card-title>
+  <form
+    #todoForm="ngForm"
+    (submit)="handleAddTodo(todoForm)"
+    class="container-fluid d-flex flex-column align-items-start p-3"
+  >
+    <!-- For Todo Input -->
+
+    <mat-form-field appearance="outline" class="w-50">
+      <mat-label>Enter Todo</mat-label>
+      <input required name="todo" ngModel matInput />
+      <mat-error>Enter a valid ToDo</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input ngModel matInput type="date" name="todo-date" required />
+      <mat-hint>Select ToDo Date</mat-hint>
+      <mat-error>Select a valid Date</mat-error>
+    </mat-form-field>
+    <button mat-button class="shadow-sm mt-5">
+      <input
+        type="submit"
+        value="Add Todo"
+        style="outline: none; border: none; background: none"
+      />
+    </button>
+  </form>
+</mat-card>

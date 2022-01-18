@@ -1,0 +1,58 @@
+<div class="p-0">
+  <img
+    src="../../../../assets/app_bg.jpg"
+    class="container-fluid img-fluid fixed-item p-0 m-0 below-item"
+  />
+  <form
+    #itemForm="ngForm"
+    class="container w-50 bg-light m-3 p-5 rounded shadow-lg flex-d justify-content-end"
+  >
+    <input
+      class="form-control"
+      type="text"
+      name="userName"
+      placeholder="Name"
+      ngModel
+      aria-label="default input example"
+    />
+    <!-- <h6 [ngClass]="{ 'd-none': itemForm.value.userName }">
+      Enter a valid name
+    </h6> -->
+    <input
+      class="form-control mt-3"
+      type="text"
+      name="userEmail"
+      ngModel
+      placeholder="Email"
+      aria-label="default input example"
+    />
+    <textarea
+      class="form-control mt-3"
+      placeholder="Enter Question Here"
+      name="question"
+      rows="3"
+      ngModel
+      required
+    ></textarea>
+    <div
+      class="alert alert-danger p-1 my-2"
+      role="alert"
+      [ngClass]="{ 'd-none': !isError }"
+    >
+      Enter valid information
+    </div>
+    <div
+      class="container-fluid mt-5 flex-column d-flex justify-content-center align-items-end"
+    >
+      <span>
+        <button
+          type="button"
+          (click)="handleFormSubmit(itemForm)"
+          class="btn btn-danger"
+        >
+          Submit
+        </button>
+      </span>
+    </div>
+  </form>
+</div>

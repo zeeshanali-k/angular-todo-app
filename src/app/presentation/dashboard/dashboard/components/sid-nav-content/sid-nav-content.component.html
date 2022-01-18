@@ -1,0 +1,86 @@
+<div
+  class="container-fluid d-flex flex-column p-2 h-100"
+  style="justify-content: space-between"
+>
+  <!-- Buttons -->
+  <div>
+    <div class="p-2 container-fluid">
+      <button
+        mat-button
+        [routerLink]="['/dashboard', { outlets: { dashboard: ['add_task'] } }]"
+        routerLinkActive="selected-item"
+        [ngClass]="{ 'selected-item': false }"
+        class="shadow-sm container-fluid"
+      >
+        <div class="d-flex flex-row justify-content-start container-fluid">
+          <mat-icon>add</mat-icon>
+          <span class="nav-link text-dark p-1">Add Task</span>
+        </div>
+      </button>
+    </div>
+    <div class="p-2 container-fluid">
+      <button
+        mat-button
+        [routerLink]="['/dashboard', { outlets: { dashboard: ['tasks'] } }]"
+        routerLinkActive="selected-item"
+        [ngClass]="{ 'selected-item': false }"
+        class="shadow-sm container-fluid"
+      >
+        <div class="d-flex flex-row justify-content-start container-fluid">
+          <mat-icon>menu</mat-icon>
+          <span class="nav-link text-dark p-1">Tasks</span>
+        </div>
+      </button>
+    </div>
+
+    <div class="p-2 container-fluid">
+      <button
+        mat-button
+        [routerLink]="[
+          '/dashboard',
+          { outlets: { dashboard: ['completed_tasks'] } }
+        ]"
+        routerLinkActive="selected-item"
+        [ngClass]="{ 'selected-item': false }"
+        class="shadow-sm container-fluid"
+      >
+        <div class="d-flex flex-row justify-content-start container-fluid">
+          <mat-icon>done</mat-icon>
+          <span class="nav-link text-dark p-1">Completed Tasks</span>
+        </div>
+      </button>
+    </div>
+
+    <div class="p-2 container-fluid">
+      <button
+        mat-button
+        [routerLink]="[
+          '/dashboard',
+          { outlets: { dashboard: ['pending_tasks'] } }
+        ]"
+        routerLinkActive="selected-item"
+        [ngClass]="{ 'selected-item': false }"
+        class="shadow-sm container-fluid"
+      >
+        <div class="d-flex flex-row justify-content-start container-fluid">
+          <mat-icon>pending</mat-icon>
+          <span class="nav-link text-dark p-1">Pending Tasks</span>
+        </div>
+      </button>
+    </div>
+  </div>
+  <div
+    class="primary_bg d-flex flex-row rounded"
+    style="
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    "
+  >
+    <img src="../.../../../../../../../assets/man_avatar.png" id="user_img" />
+    <span class="font-weight-bold text-white">Zeeshan Ali</span>
+  </div>
+</div>

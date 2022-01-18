@@ -1,0 +1,61 @@
+<div
+  class="full-screen-container d-flex flex-column align-items-center justify-content-center"
+>
+  <div
+    class="shadow-lg p-5 rounded"
+    style="background-color: rgb(245, 243, 243)"
+  >
+    <form #registerForm="ngForm" (submit)="handleRegister(registerForm)">
+      <div class="container-fluid">
+        <div class="col-auto">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            ngModel
+            required
+            class="form-control border-0"
+          />
+        </div>
+      </div>
+      <div class="container-fluid mt-3">
+        <div class="col-auto">
+          <input
+            type="email"
+            name="name"
+            placeholder="Name"
+            ngModel
+            required
+            class="form-control border-0"
+          />
+        </div>
+      </div>
+      <div class="container-fluid mt-3">
+        <div class="col-auto">
+          <input
+            type="password"
+            name="password"
+            ngModel
+            required
+            class="form-control border-0"
+            placeholder="Password"
+          />
+        </div>
+      </div>
+      <div
+        class="alert alert-danger p-1 mx-3 my-2 col-auto"
+        role="alert"
+        [ngClass]="{ 'd-none': isValid }"
+      >
+        Enter valid information
+      </div>
+      <div class="centered-container p-1 mt-3">
+        <span>
+          <button type="submit" class="btn btn-primary mx-auto">
+            Register
+          </button></span
+        >
+      </div>
+    </form>
+  </div>
+</div>
