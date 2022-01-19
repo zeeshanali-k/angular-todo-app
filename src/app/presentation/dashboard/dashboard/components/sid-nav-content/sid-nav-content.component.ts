@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sid-nav-content',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidNavContentComponent implements OnInit {
 
-  constructor() { }
+  private router: Router;
+  name = "Zeeshan Ali";
+
+  constructor(router: Router) {
+    this.router = router;
+  }
 
   ngOnInit(): void {
   }
-
+  handleLogout() {
+    localStorage.setItem("isLoggedIn", "0");
+    this.router.navigateByUrl("/");
+  }
+  handleDragEnter() {
+    console.log("Entered");
+  }
 }

@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
   handleLogin(loginDetails: NgForm) {
     this.isValid = loginDetails.valid!;
     if (loginDetails.valid) {
+      localStorage.setItem("isLoggedIn", "1");
       this.router.navigateByUrl("/dashboard");
     }
   }

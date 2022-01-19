@@ -20,11 +20,13 @@ export class AddTaskComponent implements OnInit {
       return;
     }
     let todo: Todo = {
+      id: Math.floor(Math.random() * 100000),
       todo: todoForm.value["todo"],
       date: todoForm.value["todo-date"],
+      isActive: true
     };
     let todosStr = localStorage.getItem("todos");
-    console.log(todosStr);
+    // console.log(todosStr);
 
     let todosList: Todo[];
     if (todosStr) {

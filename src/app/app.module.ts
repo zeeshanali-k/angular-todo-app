@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidNavContentComponent } from './presentation/dashboard/dashboard/components/sid-nav-content/sid-nav-content.component';
 import { AddTaskComponent } from './presentation/dashboard/tasks/add-task/add-task.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TestPipe } from './utils/pipes/test.pipe';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     SidNavContentComponent,
     AddTaskComponent,
+    TestPipe,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +47,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
+    MatCheckboxModule,
     MatButtonModule,
     MatCardModule,
     MatInputModule,

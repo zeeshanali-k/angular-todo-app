@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, NavigationStart, Router } from '@angular/router';
-import { TasksService } from './data/network/tasks.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,7 +9,10 @@ export class AppComponent {
 
   isLoading = true;
 
-  constructor(private router: Router, tasksService: TasksService) {
+  constructor(private router: Router) {
+    if (localStorage.getItem("isLoggedIn") && localStorage.getItem("isLoggedIn") == "1") {
+      router.navigateByUrl("/dashboard");
+    }
     router.events.subscribe((val) => {
       // see also 
       if (val instanceof NavigationEnd) {

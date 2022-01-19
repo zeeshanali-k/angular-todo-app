@@ -19,9 +19,9 @@ const routes: Routes = [
   {
     path: "dashboard", component: DashboardComponent, children: [
       { path: "add_task", component: AddTaskComponent, outlet: "dashboard" },
-      { path: "tasks", component: TasksComponent, outlet: "dashboard" },
-      { path: "completed_tasks", component: TasksComponent, outlet: "dashboard" },
-      { path: "pending_tasks", component: TasksComponent, outlet: "dashboard" },
+      { path: "tasks", component: TasksComponent, outlet: "dashboard", data: { "type": 1 } },
+      { path: "completed_tasks", component: TasksComponent, outlet: "dashboard", data: { "type": 2 } },
+      { path: "pending_tasks", component: TasksComponent, outlet: "dashboard", data: { "type": 3 } },
     ],
   },
 ];

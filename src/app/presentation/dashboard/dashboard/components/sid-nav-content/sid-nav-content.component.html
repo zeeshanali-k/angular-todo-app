@@ -81,6 +81,19 @@
     "
   >
     <img src="../.../../../../../../../assets/man_avatar.png" id="user_img" />
-    <span class="font-weight-bold text-white">Zeeshan Ali</span>
+    <span class="font-weight-bold text-white">{{ name | test }}</span>
+    <span class="logout-icon">
+      <mat-icon
+        ><button
+          (click)="handleLogout()"
+          class="p-1 rounded white-to-grey"
+          style="border: none"
+        >
+          logout
+        </button>
+      </mat-icon>
+
+      <div class="tooltip-tv">Logout</div>
+    </span>
   </div>
 </div>

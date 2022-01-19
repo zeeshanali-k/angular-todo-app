@@ -1,7 +1,16 @@
-<div (click)="handleDeleteTodo()">
+<div>
   <mat-card>
     <mat-card-title>
       {{ todo.todo }}
     </mat-card-title>
+    <mat-card-actions>
+      <button mat-button (click)="handleDeleteTodo()">
+        <mat-icon style="color: red">delete</mat-icon>
+        <span style="color: red" class="mx-2">Delete</span>
+      </button>
+      <mat-checkbox [checked]="!todo.isActive" (change)="handleToggle($event)">
+        <span>Done</span>
+      </mat-checkbox>
+    </mat-card-actions>
   </mat-card>
 </div>

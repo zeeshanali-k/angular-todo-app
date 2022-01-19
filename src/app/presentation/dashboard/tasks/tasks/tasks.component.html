@@ -1,3 +1,7 @@
 <div *ngFor="let todo of todos" class="p-2">
-  <app-task [todo]="todo" (deleteTodo)="handleDelete($event)"></app-task>
+  <app-task
+    [todo]="todo"
+    (deleteTodo)="handleDelete($event)"
+    (toggleActiveTodo)="handleToggleActive($event)"
+  ></app-task>
 </div>
